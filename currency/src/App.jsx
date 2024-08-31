@@ -1,4 +1,4 @@
-import useCurrency from './customhook';
+import useCurrency from './hooks/useCurrency';
 import './App.css'
 import InputBox from './Components/Input';
 import { useState } from 'react';
@@ -74,3 +74,6 @@ function App() {
           </div>
       </div>
   );
+}
+  
+  export default App;
