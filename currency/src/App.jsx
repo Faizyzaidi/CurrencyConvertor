@@ -1,5 +1,4 @@
 import useCurrency from './hooks/useCurrency';
-import './App.css'
 import InputBox from './Components/Input';
 import { useState } from 'react';
 
@@ -22,7 +21,8 @@ function App() {
   }
 
   return (
-      <div
+   <>
+    <div
           className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
           style={{
               backgroundImage: `url('https://www.synovus.com/-/media/images/corporate/insights/images/foreign-exchange-risk-928x528.jpg')`,
@@ -41,7 +41,7 @@ function App() {
                               label="From"
                               amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
+                            onCurrencyChange={(currency) => setAmount(currency)}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                           />
@@ -61,7 +61,7 @@ function App() {
                               amount={convertedAmount}
                               currencyOptions={options}
                               onCurrencyChange={(currency) => setTo(currency)}
-                              selectCurrency={from}
+                              selectCurrency={to}
                               amountDisable
                              
                           />
@@ -73,6 +73,7 @@ function App() {
               </div>
           </div>
       </div>
+      </>
   );
 }
   
